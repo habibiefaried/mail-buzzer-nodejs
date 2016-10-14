@@ -1,0 +1,30 @@
+       <% include ../layout/header.ejs %>
+<div id="page-wrapper">
+        <div class="col-md-12 graphs">
+	   <div class="xs">
+
+  	 <h3>Target List</h3>
+  	<div class="bs-example4" data-example-id="contextual-table">
+    <a href="/target/add"><button class="btn-success btn">Add Target</button></a>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email Address</th>  
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">2</th>
+          <td>Test</td>
+          <td>Test@gmail.com</td>
+          <td><a href="/delete/target/2"><i class="fa fa-trash-o"></i></a></td>
+        </tr>
+      </tbody>
+    </table>
+   </div>
+   <div class="clearfix"> </div>
+   </div>
+       <% include ../layout/footer.ejs %>

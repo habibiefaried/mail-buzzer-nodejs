@@ -1,0 +1,44 @@
+<% include layout/header.ejs %>
+        <div id="page-wrapper">
+        <div class="graphs">
+	     <div class="xs">
+  	     <h3>Mail Job Queue</h3>
+        <div class="col-md-12 inbox_right">
+         	<form action="#" method="GET">
+                <div class="input-group">
+                    <input type="text" name="search" class="form-control1 input-search" placeholder="Search...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-success" type="button"><i class="fa fa-search"></i></button>
+                    </span>
+                </div><!-- Input Group -->
+            </form>
+            <div class="mailbox-content">
+               
+                <table class="table">
+                    <tbody>
+                        <tr class="unread checked">
+                            <td class="hidden-xs">
+                                <input type="checkbox" class="checkbox">
+                            </td>
+                            <td class="hidden-xs">
+                                <i class="fa fa-star icon-state-warning"></i>
+                            </td>
+                            <td class="hidden-xs">
+                                Google
+                            </td>
+                            <td>
+                                Nullam quis risus eget urna mollis ornare vel eu leo
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                                12 march
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+               </div>
+            </div>
+            <div class="clearfix"> </div>
+       </div>
+       <% include layout/footer.ejs %>
