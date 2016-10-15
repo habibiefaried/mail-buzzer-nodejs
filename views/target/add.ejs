@@ -9,15 +9,17 @@
                         Add New Email Target 
                     </div>
                     <div class="panel-body">
-                        <form action="/target/add" method="POST">
+                        <form action="/target/add" method="POST" encType="multipart/form-data">
                         <div class="alert alert-info">
                         <hr>
                         <label>Target Name : </label>
                         <input type="text" name="name" class="form-control1 control3">
                         <label>Target Email :  </label>
                         <input type="text" name="email" class="form-control1 control3">
-                      
                         <hr>
+                        <label for="exampleInputFile">atau dengan CSV File</label>
+                        <input name="csv" type="file">
+                        <p class="help-block">Contoh file ada <a href="/contoh.csv">disini</a></p>
                         <input type="submit" class="btn-success btn" value="Add Target">
                         </form>
                     </div>

@@ -5,7 +5,7 @@
 
   	 <h3>Target List</h3>
   	<div class="bs-example4" data-example-id="contextual-table">
-    <a href="/target/add"><button class="btn-success btn">Add Target</button></a>
+    <a href="/target/add"><button class="btn-info btn">Add Target</button></a>&nbsp;&nbsp;<a href="#" onclick="alert('/target/deleteall'); return false;"><button class="btn-success btn">Delete All Targets</button></a>
     <table class="table">
       <thead>
         <tr>
@@ -16,15 +16,29 @@
         </tr>
       </thead>
       <tbody>
+      <% 
+      var i = 0;
+      for (i=0; i<data.length; i++){
+      %>
+      
         <tr>
-          <th scope="row">2</th>
-          <td>Test</td>
-          <td>Test@gmail.com</td>
-          <td><a href="/delete/target/2"><i class="fa fa-trash-o"></i></a></td>
+          <th scope="row"><%= (i+1) %></th>
+          <td><%= (data[i].name) %></td>
+          <td><%= (data[i].email) %></td>
+          <td><a href="#" onclick="alert('/target/delete/<%= (data[i].id) %>'); return false;"><i class="fa fa-trash-o"></i></a></td>
         </tr>
+        <% } %>
       </tbody>
     </table>
    </div>
    <div class="clearfix"> </div>
    </div>
        <% include ../layout/footer.ejs %>
+       <script>
+       function alert(url){
+        var result = confirm("Do you want to proceed this operation?");
+        if (result) {
+            window.location.href = url;
+        }
+       }
+       </script>
