@@ -9,15 +9,17 @@
                         Add New Email Target 
                     </div>
                     <div class="panel-body">
+                        <form action="/target/add" method="POST">
                         <div class="alert alert-info">
                         <hr>
                         <label>Target Name : </label>
-                        <input type="text" class="form-control1 control3">
+                        <input type="text" name="name" class="form-control1 control3">
                         <label>Target Email :  </label>
-                        <input type="text" class="form-control1 control3">
+                        <input type="text" name="email" class="form-control1 control3">
                       
                         <hr>
-                        <a href="#" class="btn btn-warning btn-warng1"><span class="glyphicon glyphicon-envelope tag_02"></span> Add Target </a>
+                        <input type="submit" class="btn-success btn" value="Add Target">
+                        </form>
                     </div>
                  </div>
               </div>
